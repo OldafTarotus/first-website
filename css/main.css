@@ -2,6 +2,8 @@
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background-color: #f6f6f6; 
 }
 
 * {
@@ -135,7 +137,7 @@ body {
 }
 
 .header .links ul li:not(:last-child) a {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(212, 208, 208);
 }
 
 /* end header */
@@ -175,9 +177,9 @@ body {
 
 /* start features */
 .features {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background-color);
 }
 
 .features .container {
@@ -209,7 +211,7 @@ body {
 
 /* start components  */
 .special-heading {
-    color: #6f879e;
+    color: #b6ece1;
     font-size: 100px;
     font-weight: 800;
     letter-spacing: -3px;
@@ -218,7 +220,7 @@ body {
 }
 
 .special-heading + p {
-    color: #797979;
+    color: #8f9291;
     font-size: 20px;
     text-align: center;
     margin: -20px 0 0;
@@ -240,8 +242,9 @@ body {
 /* start services  */
 
 .services {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: var(--section-padding);
+    padding-bottom:var(--section-padding) ;
+    background-color: var(--section-background-color);
 }
 
 .services .services-content {
@@ -282,7 +285,7 @@ body {
 .services .services-content .image {
     text-align: center;
     position: relative;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 .services .services-content .image::before {
     content: "";
@@ -296,9 +299,44 @@ body {
     border-radius: 10px;
 }
 
-@media (max-width: 1199px) {
+/* @media (max-width: 1199px) {
     .image-done {
         display: none;
     }
-}
+} */
 /* end services */
+
+/* start Portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--section-background-color);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.portfolio .container .portfolio-content .card .photo {
+    border-radius: 10%;
+}
+
+.portfolio .container .portfolio-content .card {
+    background-color: white;
+}
+.portfolio .container .portfolio-content .card .info {
+    padding: 20px;
+}
+.portfolio .container .portfolio-content .card .info h3 {
+    margin: 0;
+    font-weight: 800;
+}
+.portfolio .container .portfolio-content .card .info p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #444;
+}
+/* end Portfolio */
