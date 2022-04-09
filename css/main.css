@@ -205,3 +205,40 @@ body {
     font-size: 16px;
 }
 /* end features */
+
+/* start components  */
+.special-heading {
+    color: #6f879e;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    text-align: center;
+    margin: 0;
+}
+
+.special-heading + p {
+    color: #797979;
+    font-size: 20px;
+    text-align: center;
+    margin: -20px 0 0;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+}
+@media (max-width: 767px) {
+    .special-heading + p {
+        margin-top: -10px;
+    }
+}
+
+/* end components */
+
+/* start services  */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* end services */
